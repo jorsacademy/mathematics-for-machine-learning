@@ -1,58 +1,63 @@
 # Mathematics for Machine Learning
 
-A collection of reviewed Python implementations that accompany core mathematical topics used in machine learning and AI.
+Verified educational Python implementations for mathematical topics used in machine learning and AI.
 
-The emphasis is mathematical correctness, transparent implementations, input validation, and educational clarity. Framework-specific abstractions are avoided when they would hide the mathematics.
+The repository is intended for educational and non-commercial use only.
 
-## Topics and code
+## Current coverage
 
 ### Linear algebra
-
-- `linear_algebra/vector_operations.py` — vector addition, dot product, norms, normalization, and angles
-- `linear_algebra/matrix_operations.py` — matrix addition, multiplication, transpose, determinant, inverse, and trace
-- `linear_algebra/linear_independence.py` — rank-based linear-independence checks and basis extraction
+- Vector operations
+- Vector spaces and subspaces
+- Linear combinations and span
+- Linear independence and basis
+- Matrix operations and properties
 
 ### Calculus
-
-- `calculus/derivatives.py` — symbolic examples of common differentiation rules
-- `calculus/chain_rule.py` — scalar chain rule and a small explicit backpropagation example
+- Functions and their properties
+- Derivatives and differentiation rules
+- Chain rule and its applications
 
 ### Probability and statistics
-
-- `probability_statistics/central_limit_theorem.py` — CLT simulation using a skewed exponential population
-- `probability_statistics/law_of_large_numbers.py` — LLN simulation using Bernoulli trials
+- Basic probability concepts
+- Covariance and correlation
+- Central Limit Theorem
+- Law of Large Numbers
+- Hypothesis testing
 
 ### Optimization
+- Optimization fundamentals
+- Local and global extrema
+- Convex sets and functions
+- Quadratic programming
+- Gradient descent and stochastic variants
+- Momentum and Nesterov momentum
+- AdaGrad and RMSprop
+- Adam
+- Second-order and quasi-Newton methods
+- Natural gradient descent
+- Constrained optimization
+- Non-convex optimization
+- Optimization in neural networks
 
-- `optimization/stochastic_gradient_descent.py` — SGD for linear regression
-- `optimization/mini_batch_gradient_descent.py` — mini-batch gradient descent for linear regression
-- `optimization/momentum_nesterov.py` — classical momentum and Nesterov Accelerated Gradient
-- `optimization/adagrad_rmsprop.py` — AdaGrad and RMSprop from first principles
-- `optimization/adam.py` — Adam with first/second moments and bias correction
-- `optimization/quadratic_programming.py` — a checked convex quadratic-programming example
+## Design principles
+
+The examples prioritize mathematical correctness, explicit formulas, numerical robustness, and readable NumPy/SciPy implementations. Framework-specific abstractions are avoided unless they materially improve the example.
+
+Code is included only when it provides a useful computational interpretation of the mathematics.
 
 ## Installation
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-## Verification
+## Testing
 
-The numerical examples were checked against their mathematical definitions. A small regression test suite is included in `tests/test_core_algorithms.py`.
-
-You can run the tests with Python's installed test runner of your choice after installing the dependencies. The test file uses ordinary `assert` statements and is compatible with pytest.
-
-## Design principles
-
-- Prefer explicit mathematics over opaque library calls.
-- Validate dimensions, shapes, domains, and optimizer hyperparameters where appropriate.
-- Use deterministic random-number generators in stochastic demonstrations.
-- Keep examples small enough to inspect by hand.
-- Do not include code merely for the sake of including code; an example is added only when it clarifies the mathematics.
+```bash
+pytest
+```
 
 ## License
 
-This repository is intended for educational and non-commercial use only. Commercial use is not permitted. See `LICENSE` for the complete terms.
+Commercial use is not permitted. See `LICENSE` for the repository terms.
