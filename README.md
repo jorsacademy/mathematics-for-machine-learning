@@ -55,6 +55,8 @@ This repository is intended for educational and non-commercial use only.
 - Non-convex optimization
 - Optimization in neural networks
 
+For a deeper method-centered sequence on conditioning, convergence, stochastic optimization, AdamW, BFGS, proximal methods, deep-learning diagnostics, and controlled optimizer benchmarks, see `optimization_for_machine_learning/`.
+
 ### Information theory and signal processing
 - Entropy
 - Cross-entropy
@@ -81,6 +83,8 @@ The repository intentionally stops short of adding code merely to attach an impl
 
 The current codebase therefore covers the parts of the curriculum where numerical experiments materially improve mathematical understanding.
 
+The new `optimization_for_machine_learning/` track keeps this principle: it deepens optimization where numerical experiments expose convergence behavior, optimizer trade-offs, and diagnostics, while linking rather than duplicating dedicated repositories for Bayesian optimization, differentiable optimization, predict-then-optimize, neural combinatorial optimization, and learning for solvers.
+
 ## Design principles
 
 - Mathematical correctness before convenience.
@@ -95,10 +99,17 @@ The current codebase therefore covers the parts of the curriculum where numerica
 python -m pip install -r requirements.txt
 ```
 
+For the deeper optimization track:
+
+```bash
+python -m pip install -r optimization_for_machine_learning/requirements.txt
+```
+
 ## Testing
 
 ```bash
 pytest
+pytest -q optimization_for_machine_learning/tests
 ```
 
 ## License
