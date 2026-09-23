@@ -7,9 +7,14 @@ This file provides navigation across educational/reference repositories. It does
 ## 1. Mathematical and optimization foundations
 
 - `mathematics-for-machine-learning` — mathematical background for ML.
+- `optimization_for_machine_learning/` — deeper method-centered bridge from mathematical optimization to ML training: conditioning, convergence, stochastic methods, adaptive optimizers, curvature methods, proximal optimization, diagnostics, and benchmarks.
 - `integer-programming-for-operations-research` — integer programming, relaxations, branch-and-bound, cuts, formulation quality, and exact optimization concepts.
 - `sequential-decision-analytics` — bandits, dynamic programming, MDPs, reinforcement learning, and sequential decision structure.
 - `sequential-decision-analytics-policy-classes` — PFA, CFA, VFA, and DLA policy meta-classes on a common sequential decision problem.
+
+Suggested progression:
+
+`mathematics-for-machine-learning -> optimization_for_machine_learning -> specialized ML x optimization repositories`.
 
 ## 2. Bayesian and uncertainty-aware learning for optimization
 
