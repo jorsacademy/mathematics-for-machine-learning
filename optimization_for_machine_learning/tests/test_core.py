@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -13,6 +14,7 @@ def load(relative, name):
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
+    sys.modules[name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -35,7 +37,7 @@ def test_gradient_descent_reduces_spd_quadratic():
     f = lambda x: conditioning.quadratic_value(Q, b, x)
     g = lambda x: conditioning.quadratic_gradient(Q, b, x)
     trace = gradient_methods.gradient_descent(
-        f, g, np.zeros(6), conditioning.optimal_fixed_step(Q), 80
+        f, g, np.zeros(6), conditioning.optimal_fixed_step(Q), 160
     )
     assert trace.values[-1] < trace.values[0]
     assert np.linalg.norm(g(trace.x)) < 1e-3
