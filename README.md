@@ -1,5 +1,11 @@
 # Mathematics for Machine Learning
 
+<!-- portfolio-umbrella:start -->
+## Portfolio role
+
+This repository is intentionally maintained as a standalone primary repository in the consolidated Jors Academy portfolio. It is not used as a container for other projects.
+<!-- portfolio-umbrella:end -->
+
 Verified educational Python implementations for mathematical topics used in machine learning and AI.
 
 This repository is intended for educational and non-commercial use only.
